@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -17,10 +18,10 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 px-4 overflow-hidden">
+      <section className="relative py-16 md:py-20 px-4 overflow-hidden">
         <NeuralLines />
         <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h1 className="mb-6">
               <GradientText as="span">Elevate Your Leadership</GradientText>
               <span className="block">The Peak Performance Program</span>
@@ -58,7 +59,7 @@ const Index = () => {
       </section>
 
       {/* Program Description */}
-      <section className="section-compact px-4" id="program">
+      <section className="section-compact px-4 pb-0" id="program">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>About the Program</GradientText></h2>
@@ -135,7 +136,7 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="/placeholder.svg?text=Executive&bg=4A1D96&fg=CABFFD" 
+                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2342&auto=format&fit=crop" 
                   alt="CXO and Business Leaders" 
                   className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
                 />
@@ -154,7 +155,7 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="/placeholder.svg?text=High+Performer&bg=4A1D96&fg=CABFFD" 
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2340&auto=format&fit=crop" 
                   alt="High-Performing Executives" 
                   className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
                 />
@@ -173,7 +174,7 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="/placeholder.svg?text=Spouses&bg=4A1D96&fg=CABFFD" 
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2340&auto=format&fit=crop" 
                   alt="Spouses of Leaders" 
                   className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
                 />
@@ -209,7 +210,7 @@ const Index = () => {
               icon={<Brain className="h-8 w-8" />}
             >
               <img 
-                src="/placeholder.svg?text=Neural+Assessment&bg=4A1D96&fg=CABFFD" 
+                src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2573&auto=format&fit=crop" 
                 alt="Neural Assessment" 
                 className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
               />
@@ -221,7 +222,7 @@ const Index = () => {
               icon={<ZapIcon className="h-8 w-8" />}
             >
               <img 
-                src="/placeholder.svg?text=Intervention&bg=4A1D96&fg=CABFFD" 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
                 alt="Targeted Intervention" 
                 className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
               />
@@ -233,7 +234,7 @@ const Index = () => {
               icon={<Sparkles className="h-8 w-8" />}
             >
               <img 
-                src="/placeholder.svg?text=Retreat&bg=4A1D96&fg=CABFFD" 
+                src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2370&auto=format&fit=crop" 
                 alt="Retreat Experiences" 
                 className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
               />
@@ -445,5 +446,3 @@ const Index = () => {
 };
 
 export default Index;
-
-import { CheckCircle } from "lucide-react";
