@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for the Peak Performance Program
+				neural: {
+					DEFAULT: '#4F46E5',
+					100: '#EDEBFE',
+					200: '#DCD7FE',
+					300: '#CABFFD',
+					400: '#AC94FA',
+					500: '#9061F9',
+					600: '#7E3AF2',
+					700: '#6C2BD9',
+					800: '#5521B5',
+					900: '#4A1D96',
+				},
+				gold: {
+					DEFAULT: '#F59E0B',
+					light: '#FBBF24',
 				}
 			},
 			borderRadius: {
@@ -84,11 +102,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'neural-pulse': {
+					'0%': { 
+						opacity: '0.4',
+						transform: 'scale(0.95)'
+					},
+					'50%': { 
+						opacity: '0.7',
+						transform: 'scale(1)'
+					},
+					'100%': { 
+						opacity: '0.4',
+						transform: 'scale(0.95)'
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'neural-pulse': 'neural-pulse 8s ease-in-out infinite'
 			}
 		}
 	},
