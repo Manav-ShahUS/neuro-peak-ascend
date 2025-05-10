@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -8,7 +7,9 @@ import NeuralLines from "@/components/NeuralLines";
 import BenefitCard from "@/components/BenefitCard";
 import OutcomeItem from "@/components/OutcomeItem";
 import ConsultationForm from "@/components/ConsultationForm";
-import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles } from "lucide-react";
+import StatCard from "@/components/StatCard";
+import TestimonialCard from "@/components/TestimonialCard";
+import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle, QuoteIcon } from "lucide-react";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -16,7 +17,7 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+      <section className="relative py-20 md:py-28 px-4 overflow-hidden">
         <NeuralLines />
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-12">
@@ -47,7 +48,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="relative w-full max-w-3xl mx-auto h-[300px] md:h-[400px]">
+          <div className="neural-globe">
             <div className="absolute inset-0 bg-neural-500/20 rounded-full blur-[100px] animate-pulse-slow"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 bg-gradient-to-br from-neural-400/30 to-neural-700/30 rounded-full flex items-center justify-center animate-float">
               <div className="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-neural-400 to-neural-700 rounded-full opacity-70"></div>
@@ -57,7 +58,7 @@ const Index = () => {
       </section>
 
       {/* Program Description */}
-      <section className="py-16 px-4" id="program">
+      <section className="section-compact px-4" id="program">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>About the Program</GradientText></h2>
@@ -93,8 +94,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <section className="section-compact px-4 bg-neural-900/30" id="stats">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="mb-4"><GradientText>Program Impact</GradientText></h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Our participants achieve measurable improvements in key areas
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StatCard 
+              percentage="92%" 
+              description="of participants are better at teamwork and collaboration"
+            />
+            <StatCard 
+              percentage="91%" 
+              description="of participants manage stress better"
+            />
+            <StatCard 
+              percentage="84%" 
+              description="of participants are better at conflict management"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Who is this for */}
-      <section className="py-16 px-4 bg-neural-900/30" id="who">
+      <section className="section-compact px-4" id="who">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>Who Is This Program For?</GradientText></h2>
@@ -104,9 +132,16 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="bg-card/50 border-neural-700/30">
+            <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
+              <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
+                <img 
+                  src="/placeholder.svg?text=Executive&bg=4A1D96&fg=CABFFD" 
+                  alt="CXO and Business Leaders" 
+                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                />
+              </div>
               <div className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-neural-900 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto -mt-14 mb-4 rounded-full bg-neural-900 flex items-center justify-center border-4 border-background">
                   <Users className="h-8 w-8 text-neural-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">CXOs and Business Leaders</h3>
@@ -116,9 +151,16 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="bg-card/50 border-neural-700/30">
+            <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
+              <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
+                <img 
+                  src="/placeholder.svg?text=High+Performer&bg=4A1D96&fg=CABFFD" 
+                  alt="High-Performing Executives" 
+                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                />
+              </div>
               <div className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-neural-900 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto -mt-14 mb-4 rounded-full bg-neural-900 flex items-center justify-center border-4 border-background">
                   <Target className="h-8 w-8 text-neural-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">High-Performing Executives</h3>
@@ -128,9 +170,16 @@ const Index = () => {
               </div>
             </Card>
             
-            <Card className="bg-card/50 border-neural-700/30">
+            <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
+              <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
+                <img 
+                  src="/placeholder.svg?text=Spouses&bg=4A1D96&fg=CABFFD" 
+                  alt="Spouses of Leaders" 
+                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                />
+              </div>
               <div className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-neural-900 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto -mt-14 mb-4 rounded-full bg-neural-900 flex items-center justify-center border-4 border-background">
                   <Heart className="h-8 w-8 text-neural-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Spouses of Leaders</h3>
@@ -143,11 +192,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-16 px-4" id="benefits">
+      {/* Program Inclusions (formerly Benefits) */}
+      <section className="section-compact px-4 bg-neural-900/30" id="benefits">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="mb-4"><GradientText>Program Benefits</GradientText></h2>
+            <h2 className="mb-4"><GradientText>Program Inclusions</GradientText></h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
               Our neuroscience-based approach delivers measurable improvements
             </p>
@@ -158,25 +207,78 @@ const Index = () => {
               title="Precise Neural Assessment"
               description="Utilizing advanced quantitative electroencephalography (qEEG) to identify your unique neurological patterns."
               icon={<Brain className="h-8 w-8" />}
-            />
+            >
+              <img 
+                src="/placeholder.svg?text=Neural+Assessment&bg=4A1D96&fg=CABFFD" 
+                alt="Neural Assessment" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
             
             <BenefitCard
               title="Targeted Intervention"
               description="Employing neuroscience-backed strategies to optimize specific neural pathways associated with executive function."
               icon={<ZapIcon className="h-8 w-8" />}
-            />
+            >
+              <img 
+                src="/placeholder.svg?text=Intervention&bg=4A1D96&fg=CABFFD" 
+                alt="Targeted Intervention" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
             
             <BenefitCard
               title="Luxurious Retreat Experiences"
               description="Immersive environments designed to facilitate deep transformation and focus."
               icon={<Sparkles className="h-8 w-8" />}
+            >
+              <img 
+                src="/placeholder.svg?text=Retreat&bg=4A1D96&fg=CABFFD" 
+                alt="Retreat Experiences" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-compact px-4" id="testimonials">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="mb-4"><GradientText>What Our Participants Say</GradientText></h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Real results from executives who've experienced our program
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <TestimonialCard
+              quote="This program dramatically improved my ability to make decisions under pressure. The neuroscience-backed approach delivered results I hadn't achieved with years of traditional coaching."
+              author="Sarah Johnson"
+              role="CEO, Global Technologies"
+            />
+            <TestimonialCard
+              quote="The Peak Performance Program transformed not just my professional life, but my personal wellbeing. I'm more present, focused, and effective than ever before."
+              author="Michael Chen"
+              role="CFO, Innovation Partners"
+            />
+            <TestimonialCard
+              quote="As the spouse of a CEO, this program helped me develop my own resilience while supporting my partner. The dual approach is what makes this truly unique."
+              author="Rebecca Taylor"
+              role="Executive Spouse & Entrepreneur"
+            />
+            <TestimonialCard
+              quote="The cognitive improvements I've experienced are measurable and profound. My team has noticed the difference in my leadership presence and decision-making clarity."
+              author="David Martinez"
+              role="COO, Nexus Industries"
             />
           </div>
         </div>
       </section>
 
       {/* Expected Outcomes */}
-      <section className="py-16 px-4 bg-neural-900/30" id="outcomes">
+      <section className="section-compact px-4 bg-neural-900/30" id="outcomes">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>Expected Outcomes</GradientText></h2>
@@ -283,7 +385,7 @@ const Index = () => {
       </section>
 
       {/* Consultation */}
-      <section className="py-16 px-4" id="consultation">
+      <section className="section-compact px-4" id="consultation">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>Ready to Unlock Your Ultimate Potential?</GradientText></h2>
@@ -344,5 +446,4 @@ const Index = () => {
 
 export default Index;
 
-// Missing import
 import { CheckCircle } from "lucide-react";
