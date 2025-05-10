@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -46,13 +45,6 @@ const Index = () => {
               >
                 Explore Benefits
               </Button>
-            </div>
-          </div>
-          
-          <div className="neural-globe">
-            <div className="absolute inset-0 bg-neural-500/20 rounded-full blur-[100px] animate-pulse-slow"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 bg-gradient-to-br from-neural-400/30 to-neural-700/30 rounded-full flex items-center justify-center animate-float">
-              <div className="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-neural-400 to-neural-700 rounded-full opacity-70"></div>
             </div>
           </div>
         </div>
