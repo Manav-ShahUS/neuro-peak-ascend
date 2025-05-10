@@ -120,4 +120,15 @@
   .gold-accent {
     @apply text-gold-light;
   }
+
+  /* Add more compact spacing for sections */
+  .section-compact {
+    @apply py-10 md:py-16;
+  }
+  
+  /* Add styles for neural globe to make it more compact */
+  .neural-globe {
+    @apply h-[200px] md:h-[250px] relative w-full max-w-2xl mx-auto;
+  }
 }
+
