@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,7 +11,7 @@ import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import MainNavigation from "@/components/MainNavigation";
 import Footer from "@/components/Footer";
-import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle } from "lucide-react";
+import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle, Clock, Gem } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -49,7 +48,7 @@ const Index = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-neural-700 text-neural-400 hover:bg-neural-900/50"
-                onClick={() => document.getElementById('benefits')?.scrollIntoView({behavior: 'smooth'})}
+                onClick={() => document.getElementById('offerings')?.scrollIntoView({behavior: 'smooth'})}
               >
                 Explore The Program
               </Button>
@@ -199,8 +198,156 @@ const Index = () => {
         </div>
       </section>
 
+      {/* All Offerings Section */}
+      <section className="section-compact px-4 bg-neural-900/30" id="offerings">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="mb-4"><GradientText>Our Offerings</GradientText></h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Choose the path that aligns with your leadership journey
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Flagship Program */}
+            <Card className="bg-card/50 border-neural-700/30 hover:border-neural-500 transition-colors cursor-pointer group">
+              <div className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 rounded-full bg-neural-900/70 flex items-center justify-center">
+                    <Gem className="h-8 w-8 text-neural-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-center">The Peak Performers Program</h3>
+                <p className="text-muted-foreground mb-4 text-center">Our signature 6-month transformational journey</p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Comprehensive performance assessment</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">12 personalized 1:1 coaching sessions</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Two 3-day immersive retreats</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Customized lifestyle & nutrition protocols</span>
+                  </li>
+                </ul>
+                <Link to="/offerings" className="block">
+                  <Button className="w-full bg-neural-600 hover:bg-neural-700 text-white group-hover:bg-neural-500">Learn More</Button>
+                </Link>
+              </div>
+            </Card>
+            
+            {/* Executive Intensive */}
+            <Card className="bg-card/50 border-neural-700/30 hover:border-neural-500 transition-colors cursor-pointer group">
+              <div className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 rounded-full bg-neural-900/70 flex items-center justify-center">
+                    <ZapIcon className="h-8 w-8 text-neural-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-center">Executive Intensive</h3>
+                <p className="text-muted-foreground mb-4 text-center">A concentrated 8-week leadership program</p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Targeted assessment for specific challenges</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">6 intensive coaching sessions</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">One 2-day intensive workshop</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Customized toolkit & 30-day support</span>
+                  </li>
+                </ul>
+                <Link to="/offerings" className="block">
+                  <Button className="w-full bg-neural-600 hover:bg-neural-700 text-white group-hover:bg-neural-500">Learn More</Button>
+                </Link>
+              </div>
+            </Card>
+            
+            {/* Immersive Retreats */}
+            <Card className="bg-card/50 border-neural-700/30 hover:border-neural-500 transition-colors cursor-pointer group">
+              <div className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 rounded-full bg-neural-900/70 flex items-center justify-center">
+                    <Sparkles className="h-8 w-8 text-neural-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-center">Immersive Retreats</h3>
+                <p className="text-muted-foreground mb-4 text-center">Transformative 3-7 day experiences</p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Curated environments for transformation</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Small group experience (max 8)</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Customized experiential activities</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Integration session & follow-up</span>
+                  </li>
+                </ul>
+                <Link to="/offerings" className="block">
+                  <Button className="w-full bg-neural-600 hover:bg-neural-700 text-white group-hover:bg-neural-500">Learn More</Button>
+                </Link>
+              </div>
+            </Card>
+          </div>
+          
+          {/* Custom Programs */}
+          <div className="mt-10">
+            <Card className="neural-card">
+              <div className="flex flex-col md:flex-row items-center gap-8 p-6">
+                <div className="md:w-1/4">
+                  <div className="w-24 h-24 mx-auto bg-neural-900/70 rounded-full flex items-center justify-center">
+                    <Target className="w-12 h-12 text-neural-400" />
+                  </div>
+                </div>
+                
+                <div className="md:w-3/4">
+                  <h3 className="text-2xl font-semibold mb-4">Custom Organizational Programs</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    Tailored leadership development for your entire organization or executive team.
+                  </p>
+                  <p className="mb-6">
+                    Whether you're scaling rapidly, navigating a major transition, or seeking to elevate your leadership culture, 
+                    we can design a program that meets your unique organizational needs.
+                  </p>
+                  <Link to="/offerings">
+                    <Button 
+                      size="lg" 
+                      className="bg-neural-600 hover:bg-neural-700 text-white"
+                    >
+                      Explore All Offerings
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Program Inclusions */}
-      <section className="section-compact px-4 bg-neural-900/30" id="benefits">
+      <section className="section-compact px-4" id="benefits">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>You Will Experience</GradientText></h2>
@@ -293,7 +440,7 @@ const Index = () => {
       </section>
 
       {/* Expected Outcomes */}
-      <section className="section-compact px-4 bg-neural-900/30" id="outcomes">
+      <section className="section-compact px-4" id="outcomes">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>The Results You Can Expect</GradientText></h2>
@@ -324,6 +471,30 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-3">Aligned Leadership</h3>
               <p className="text-muted-foreground">
                 Rooted in authentic power and purpose-driven impact
+              </p>
+            </Card>
+
+            <Card className="neural-card">
+              <Target className="h-10 w-10 text-neural-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Purpose & Vision</h3>
+              <p className="text-muted-foreground">
+                Reconnect with your deepest purpose and create a clear vision
+              </p>
+            </Card>
+            
+            <Card className="neural-card">
+              <Clock className="h-10 w-10 text-neural-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Time & Energy Mastery</h3>
+              <p className="text-muted-foreground">
+                Optimize your most precious resources for maximum impact
+              </p>
+            </Card>
+            
+            <Card className="neural-card">
+              <Gem className="h-10 w-10 text-neural-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-3">A Life Designed, Not Defaulted</h3>
+              <p className="text-muted-foreground">
+                Move from reactive to intentional in every area of life
               </p>
             </Card>
           </div>
