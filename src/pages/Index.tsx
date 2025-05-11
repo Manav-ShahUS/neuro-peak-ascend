@@ -10,16 +10,21 @@ import OutcomeItem from "@/components/OutcomeItem";
 import ConsultationForm from "@/components/ConsultationForm";
 import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle, QuoteIcon } from "lucide-react";
+import MainNavigation from "@/components/MainNavigation";
+import Footer from "@/components/Footer";
+import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
   return (
     <div className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
+      <MainNavigation />
+      
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 px-4 overflow-hidden">
-        <NeuralLines />
+        <NeuralLines density="high" className="opacity-30" />
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-10">
             <h1 className="mb-6">
@@ -181,8 +186,15 @@ const Index = () => {
             </Card>
           </div>
           
-          <div className="text-center mt-8 text-muted-foreground">
-            <p>If you lead people, steer vision, or shape culture—this is for you.</p>
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">
+              If you lead people, steer vision, or shape culture—this is for you.
+            </p>
+            <Link to="/about">
+              <Button variant="outline" className="border-neural-700 text-neural-400 hover:bg-neural-900/50">
+                Learn More About Our Approach
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -233,6 +245,14 @@ const Index = () => {
                 className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
               />
             </BenefitCard>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link to="/offerings">
+              <Button className="bg-neural-600 hover:bg-neural-700 text-white">
+                Explore All Offerings
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -307,6 +327,14 @@ const Index = () => {
               </p>
             </Card>
           </div>
+          
+          <div className="text-center mt-8">
+            <Link to="/methodology">
+              <Button variant="outline" className="border-neural-700 text-neural-400 hover:bg-neural-900/50">
+                Learn About Our Methodology
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -331,6 +359,14 @@ const Index = () => {
               author="Sarah Johnson"
               role="Founder, Elevate Capital"
             />
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link to="/testimonials">
+              <Button className="bg-neural-600 hover:bg-neural-700 text-white">
+                Read More Success Stories
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -380,20 +416,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-4 border-t border-neural-800/30">
-        <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center">
-              <Brain className="h-6 w-6 text-neural-400 mr-2" />
-              <span className="font-semibold text-xl">Peak Performers Program</span>
-            </div>
-            <div className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} All rights reserved
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

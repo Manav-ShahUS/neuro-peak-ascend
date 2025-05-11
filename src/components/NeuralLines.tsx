@@ -3,9 +3,10 @@ import React, { useEffect, useRef } from "react";
 
 interface NeuralLinesProps {
   className?: string;
+  density?: 'low' | 'medium' | 'high';
 }
 
-const NeuralLines = ({ className }: NeuralLinesProps) => {
+const NeuralLines = ({ className, density = 'medium' }: NeuralLinesProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   
   // Generate more natural-looking random paths
@@ -25,8 +26,18 @@ const NeuralLines = ({ className }: NeuralLinesProps) => {
     return `M${startX},${startY} C${cp1x},${cp1y} ${cp2x},${cp2y} ${endX},${endY}`;
   };
 
+  // Determine number of paths based on density
+  const getPathCount = () => {
+    switch(density) {
+      case 'low': return 8;
+      case 'high': return 24;
+      case 'medium':
+      default: return 15;
+    }
+  };
+
   return (
-    <div className={`absolute inset-0 overflow-hidden opacity-30 pointer-events-none ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden opacity-20 pointer-events-none ${className}`}>
       <svg
         ref={svgRef}
         width="100%"
@@ -40,7 +51,7 @@ const NeuralLines = ({ className }: NeuralLinesProps) => {
             <stop offset="100%" stopColor="#7E3AF2" stopOpacity="0.8" />
           </linearGradient>
         </defs>
-        {Array.from({ length: 15 }).map((_, i) => (
+        {Array.from({ length: getPathCount() }).map((_, i) => (
           <path
             key={i}
             d={generatePath()}
