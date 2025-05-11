@@ -6,8 +6,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Brain, Target, ZapIcon, ShieldCheck, CheckCircle, Users } from "lucide-react";
+import { Brain, Target, ZapIcon, ShieldCheck, CheckCircle, Users, Sparkles, Clock, Utensils } from "lucide-react";
 import { useState } from "react";
+import BenefitCard from "@/components/BenefitCard";
 
 const Offerings = () => {
   const [activeTab, setActiveTab] = useState("flagship");
@@ -32,9 +33,97 @@ const Offerings = () => {
         </div>
       </section>
 
-      {/* Offerings Content */}
+      {/* Program Features */}
       <section className="section-compact px-4">
         <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="mb-4"><GradientText>The Peak Performance Experience</GradientText></h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Every program includes these transformative elements, tailored to your specific journey
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <BenefitCard
+              title="Deep Diagnostics"
+              description="Comprehensive assessment for longevity, vitality & energetic clarity"
+              icon={<Brain className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2573&auto=format&fit=crop" 
+                alt="Deep Diagnostics" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+            
+            <BenefitCard
+              title="1-on-1 Mentorship"
+              description="Personalized guidance with world-class experts across domains"
+              icon={<ZapIcon className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
+                alt="1-on-1 Mentorship" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+            
+            <BenefitCard
+              title="Immersive Sacred Retreats"
+              description="Powerful environments designed to reset, renew, and rewire your system"
+              icon={<Sparkles className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2370&auto=format&fit=crop" 
+                alt="Immersive Sacred Retreats" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+
+            <BenefitCard
+              title="Lifestyle & Nutrition Coaching"
+              description="Customized protocols to fuel high performance and optimize wellbeing"
+              icon={<Utensils className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2340&auto=format&fit=crop" 
+                alt="Lifestyle & Nutrition Coaching" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+
+            <BenefitCard
+              title="Continuous Accountability"
+              description="Structured support system ensuring measurable transformation"
+              icon={<Clock className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
+                alt="Continuous Accountability" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+          </div>
+
+          <div className="text-center mt-8 mb-12">
+            <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+              Every detail is intentional. Every session is curated.
+              The goal: to align your biology, mindset, purpose, and leadership.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Offerings Content */}
+      <section className="section-compact px-4 bg-neural-900/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="mb-4"><GradientText>Program Options</GradientText></h2>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
+              Choose the transformational journey that fits your current needs and aspirations
+            </p>
+          </div>
+
           <Tabs defaultValue="flagship" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-1 md:grid-cols-3">
               <TabsTrigger value="flagship">Flagship Program</TabsTrigger>
@@ -69,6 +158,10 @@ const Offerings = () => {
                           <li className="flex gap-3">
                             <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
                             <span>Personalized nutrition and lifestyle protocol</span>
+                          </li>
+                          <li className="flex gap-3">
+                            <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
+                            <span>Weekly accountability check-ins</span>
                           </li>
                           <li className="flex gap-3">
                             <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
@@ -157,6 +250,14 @@ const Offerings = () => {
                           </li>
                           <li className="flex gap-3">
                             <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
+                            <span>Customized nutrition and lifestyle recommendations</span>
+                          </li>
+                          <li className="flex gap-3">
+                            <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
+                            <span>Weekly accountability check-ins</span>
+                          </li>
+                          <li className="flex gap-3">
+                            <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
                             <span>Customized toolkit for your specific situation</span>
                           </li>
                           <li className="flex gap-3">
@@ -242,7 +343,15 @@ const Offerings = () => {
                           </li>
                           <li className="flex gap-3">
                             <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
+                            <span>Nutritional support and wellness practices</span>
+                          </li>
+                          <li className="flex gap-3">
+                            <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
                             <span>One 1:1 integration session post-retreat</span>
+                          </li>
+                          <li className="flex gap-3">
+                            <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
+                            <span>30-day accountability program</span>
                           </li>
                           <li className="flex gap-3">
                             <CheckCircle className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
@@ -256,15 +365,15 @@ const Offerings = () => {
                         <ul className="space-y-3">
                           <li className="flex gap-3">
                             <Users className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
-                            <span><strong>July 2023:</strong> "Vision Quest" - Sedona, Arizona</span>
+                            <span><strong>July 2025:</strong> "Vision Quest" - Sedona, Arizona</span>
                           </li>
                           <li className="flex gap-3">
                             <Users className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
-                            <span><strong>September 2023:</strong> "Deep Renewal" - Bali, Indonesia</span>
+                            <span><strong>September 2025:</strong> "Deep Renewal" - Bali, Indonesia</span>
                           </li>
                           <li className="flex gap-3">
                             <Users className="h-6 w-6 text-neural-400 flex-shrink-0 mt-1" />
-                            <span><strong>November 2023:</strong> "Winter Wisdom" - Swiss Alps</span>
+                            <span><strong>November 2025:</strong> "Winter Wisdom" - Swiss Alps</span>
                           </li>
                         </ul>
                       </div>
@@ -304,7 +413,7 @@ const Offerings = () => {
       </section>
 
       {/* Custom Programs */}
-      <section className="section-compact px-4 bg-neural-900/30">
+      <section className="section-compact px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="mb-4"><GradientText>Custom Programs</GradientText></h2>

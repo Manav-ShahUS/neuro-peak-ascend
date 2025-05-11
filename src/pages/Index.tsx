@@ -12,7 +12,7 @@ import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import MainNavigation from "@/components/MainNavigation";
 import Footer from "@/components/Footer";
-import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle } from "lucide-react";
+import { Brain, Activity, LineChart, ShieldCheck, ZapIcon, Target, Heart, BarChart3, Users, Sparkles, CheckCircle, Utensils, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -245,9 +245,37 @@ const Index = () => {
                 className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
               />
             </BenefitCard>
+
+            <BenefitCard
+              title="Lifestyle & Nutrition Coaching"
+              description="Customized protocols to fuel high performance and optimize wellbeing"
+              icon={<Utensils className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2340&auto=format&fit=crop" 
+                alt="Lifestyle & Nutrition Coaching" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
+
+            <BenefitCard
+              title="Continuous Accountability"
+              description="Structured support system ensuring measurable transformation"
+              icon={<Clock className="h-8 w-8" />}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
+                alt="Continuous Accountability" 
+                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
+              />
+            </BenefitCard>
           </div>
           
           <div className="text-center mt-8">
+            <p className="text-lg max-w-3xl mx-auto text-muted-foreground mb-6">
+              Every detail is intentional. Every session is curated.
+              The goal: to align your biology, mindset, purpose, and leadership.
+            </p>
             <Link to="/offerings">
               <Button className="bg-neural-600 hover:bg-neural-700 text-white">
                 Explore All Offerings
