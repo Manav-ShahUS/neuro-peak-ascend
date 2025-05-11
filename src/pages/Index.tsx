@@ -210,65 +210,75 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <BenefitCard
-              title="Deep Diagnostics"
-              description="Comprehensive assessment for longevity, vitality & energetic clarity"
-              icon={<Brain className="h-8 w-8" />}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2573&auto=format&fit=crop" 
-                alt="Deep Diagnostics" 
-                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
-              />
-            </BenefitCard>
+            <Link to="/offerings#diagnostics" className="block group">
+              <BenefitCard
+                title="Deep Diagnostics"
+                description="Comprehensive assessment for longevity, vitality & energetic clarity"
+                icon={<Brain className="h-8 w-8" />}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2573&auto=format&fit=crop" 
+                  alt="Deep Diagnostics" 
+                  className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </BenefitCard>
+            </Link>
             
-            <BenefitCard
-              title="1-on-1 Mentorship"
-              description="Personalized guidance with world-class experts across domains"
-              icon={<ZapIcon className="h-8 w-8" />}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
-                alt="1-on-1 Mentorship" 
-                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
-              />
-            </BenefitCard>
+            <Link to="/offerings#mentorship" className="block group">
+              <BenefitCard
+                title="1-on-1 Mentorship"
+                description="Personalized guidance with world-class experts across domains"
+                icon={<ZapIcon className="h-8 w-8" />}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
+                  alt="1-on-1 Mentorship" 
+                  className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </BenefitCard>
+            </Link>
             
-            <BenefitCard
-              title="Immersive Sacred Retreats"
-              description="Powerful environments designed to reset, renew, and rewire your system"
-              icon={<Sparkles className="h-8 w-8" />}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2370&auto=format&fit=crop" 
-                alt="Immersive Sacred Retreats" 
-                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
-              />
-            </BenefitCard>
+            <Link to="/offerings#retreats" className="block group">
+              <BenefitCard
+                title="Immersive Sacred Retreats"
+                description="Powerful environments designed to reset, renew, and rewire your system"
+                icon={<Sparkles className="h-8 w-8" />}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2370&auto=format&fit=crop" 
+                  alt="Immersive Sacred Retreats" 
+                  className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </BenefitCard>
+            </Link>
 
-            <BenefitCard
-              title="Lifestyle & Nutrition Coaching"
-              description="Customized protocols to fuel high performance and optimize wellbeing"
-              icon={<Utensils className="h-8 w-8" />}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2340&auto=format&fit=crop" 
-                alt="Lifestyle & Nutrition Coaching" 
-                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
-              />
-            </BenefitCard>
+            <Link to="/offerings#nutrition" className="block group">
+              <BenefitCard
+                title="Lifestyle & Nutrition Coaching"
+                description="Customized protocols to fuel high performance and optimize wellbeing"
+                icon={<Utensils className="h-8 w-8" />}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2340&auto=format&fit=crop" 
+                  alt="Lifestyle & Nutrition Coaching" 
+                  className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </BenefitCard>
+            </Link>
 
-            <BenefitCard
-              title="Continuous Accountability"
-              description="Structured support system ensuring measurable transformation"
-              icon={<Clock className="h-8 w-8" />}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
-                alt="Continuous Accountability" 
-                className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80"
-              />
-            </BenefitCard>
+            <Link to="/offerings#accountability" className="block group">
+              <BenefitCard
+                title="Continuous Accountability"
+                description="Structured support system ensuring measurable transformation"
+                icon={<Clock className="h-8 w-8" />}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
+                  alt="Continuous Accountability" 
+                  className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </BenefitCard>
+            </Link>
           </div>
           
           <div className="text-center mt-8">
