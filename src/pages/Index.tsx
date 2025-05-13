@@ -238,7 +238,7 @@ const Index = () => {
               </BenefitCard>
             </Link>
             
-            <Link to="/offerings#retreats" className="block group">
+            <Link to="/retreats" className="block group">
               <BenefitCard
                 title="Immersive Sacred Retreats"
                 description="Powerful environments designed to reset, renew, and rewire your system"
