@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import MainNavigation from "@/components/MainNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import GradientText from "@/components/GradientText";
+import { GradientText } from "@/components/GradientText";
 import { Check, FileText, Gauge, ShieldCheck, Brain, TestTube, Heart, CircleCheck } from "lucide-react";
 
 const PeakPerformanceTesting = () => {
