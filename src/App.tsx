@@ -10,6 +10,7 @@ import Methodology from "./pages/Methodology";
 import Offerings from "./pages/Offerings";
 import Testimonials from "./pages/Testimonials";
 import ImmersiveRetreats from "./pages/ImmersiveRetreats";
+import PeakPerformanceTesting from "./pages/PeakPerformanceTesting";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/offerings" element={<Offerings />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/retreats" element={<ImmersiveRetreats />} />
+          <Route path="/testing" element={<PeakPerformanceTesting />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
