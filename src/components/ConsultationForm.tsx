@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,7 +57,7 @@ const ConsultationForm = () => {
       <Button 
         type="button"
         className="w-full bg-neural-600 hover:bg-neural-700 text-white"
-        onClick={() => window.open('https://calendly.com/holisticaworld/peak-performance-consultation', '_blank')}
+        onClick={() => window.open('https://calendly.com/drdharmeshshah/peak-performance-consultation', '_blank')}
       >
         Schedule a Consultation
       </Button>
