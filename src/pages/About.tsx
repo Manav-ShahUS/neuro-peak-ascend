@@ -56,8 +56,8 @@ const About = () => {
             <div>
               <div className="aspect-video rounded-lg overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2670&auto=format&fit=crop"
-                  alt="Leadership transformation"
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2340&auto=format&fit=crop"
+                  alt="Executive leadership meeting"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -114,7 +114,7 @@ const About = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-64 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2340&auto=format&fit=crop" 
                   alt="Dr. Dharmesh Shah" 
                   className="w-full h-full object-cover object-center"
                 />
@@ -131,7 +131,7 @@ const About = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-64 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1494790108755-2616c047495c?q=80&w=2340&auto=format&fit=crop" 
                   alt="Dr. Sarah Johnson" 
                   className="w-full h-full object-cover object-center"
                 />
@@ -148,7 +148,7 @@ const About = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-64 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=2574&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop" 
                   alt="Michael Chen" 
                   className="w-full h-full object-cover object-center"
                 />

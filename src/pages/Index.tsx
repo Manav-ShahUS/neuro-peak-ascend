@@ -131,9 +131,9 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2342&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2340&auto=format&fit=crop" 
                   alt="Visionary CEOs & Founders" 
-                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                  className="w-full h-full object-cover object-center opacity-90"
                 />
               </div>
               <div className="p-6 text-center">
@@ -150,9 +150,9 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2340&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2340&auto=format&fit=crop" 
                   alt="Elite C-Suite Executives" 
-                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                  className="w-full h-full object-cover object-center opacity-90"
                 />
               </div>
               <div className="p-6 text-center">
@@ -169,9 +169,9 @@ const Index = () => {
             <Card className="bg-card/50 border-neural-700/30 overflow-hidden">
               <div className="h-48 bg-gradient-to-b from-neural-700/20 to-neural-900/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2340&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2340&auto=format&fit=crop" 
                   alt="Impact-Focused Leaders" 
-                  className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity"
+                  className="w-full h-full object-cover object-center opacity-90"
                 />
               </div>
               <div className="p-6 text-center">
@@ -217,7 +217,7 @@ const Index = () => {
                 icon={<Brain className="h-8 w-8" />}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2573&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
                   alt="Deep Diagnostics" 
                   className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
@@ -231,7 +231,7 @@ const Index = () => {
                 icon={<ZapIcon className="h-8 w-8" />}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2340&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
                   alt="1-on-1 Mentorship" 
                   className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
@@ -245,7 +245,7 @@ const Index = () => {
                 icon={<Sparkles className="h-8 w-8" />}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2370&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2340&auto=format&fit=crop" 
                   alt="Immersive Sacred Retreats" 
                   className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
@@ -259,7 +259,7 @@ const Index = () => {
                 icon={<Utensils className="h-8 w-8" />}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2340&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2340&auto=format&fit=crop" 
                   alt="Lifestyle & Nutrition Coaching" 
                   className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
@@ -273,7 +273,7 @@ const Index = () => {
                 icon={<Clock className="h-8 w-8" />}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2340&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2340&auto=format&fit=crop" 
                   alt="Continuous Accountability" 
                   className="w-full h-32 object-cover object-center rounded-lg mb-6 opacity-80 group-hover:opacity-100 transition-opacity"
                 />

@@ -36,7 +36,7 @@ const Testimonials = () => {
               <div className="md:w-1/3">
                 <div className="rounded-full overflow-hidden w-48 h-48 mx-auto border-4 border-neural-700/30">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop" 
                     alt="Michael Chen" 
                     className="w-full h-full object-cover"
                   />
