@@ -56,11 +56,11 @@ const ConsultationForm = () => {
         />
       </div>
       <Button 
-        type="submit" 
+        type="button"
         className="w-full bg-neural-600 hover:bg-neural-700 text-white"
-        disabled={loading}
+        onClick={() => window.open('https://calendly.com/holisticaworld/peak-performance-consultation', '_blank')}
       >
-        {loading ? "Processing..." : "Schedule a Consultation"}
+        Schedule a Consultation
       </Button>
       <p className="text-xs text-center text-muted-foreground mt-2">
         Your information is confidential and secure
