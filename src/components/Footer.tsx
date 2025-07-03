@@ -1,10 +1,7 @@
-
 import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
-  return (
-    <footer className="py-12 px-4 border-t border-neural-800/30 bg-neural-900/30">
+  return <footer className="py-12 px-4 border-t border-neural-800/30 bg-neural-900/30">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -36,9 +33,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">contact@peakperformers.program</li>
-              <li className="text-muted-foreground">+1 (888) 555-0123</li>
-              <li className="text-muted-foreground">New York • London • Singapore</li>
+              <li className="text-muted-foreground">manav.shah@holisticaworld.com</li>
+              <li className="text-muted-foreground">+91-82386-24142</li>
+              <li className="text-muted-foreground">Mumbai • London • Dubai</li>
             </ul>
             <div className="mt-4 flex space-x-4">
               <a href="#" className="text-neural-400 hover:text-neural-500 transition-colors">LinkedIn</a>
@@ -59,8 +56,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
