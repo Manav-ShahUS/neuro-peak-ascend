@@ -5,7 +5,7 @@ import NeuralLines from "@/components/NeuralLines";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/TestimonialCard";
-import { Brain, QuoteIcon } from "lucide-react";
+import { QuoteIcon } from "lucide-react";
 
 const Testimonials = () => {
   return (
@@ -36,8 +36,8 @@ const Testimonials = () => {
               <div className="md:w-1/3">
                 <div className="rounded-full overflow-hidden w-48 h-48 mx-auto border-4 border-neural-700/30">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2340&auto=format&fit=crop" 
-                    alt="Michael Chen" 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2340&auto=format&fit=crop" 
+                    alt="Anil Bhikadiya" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -46,11 +46,11 @@ const Testimonials = () => {
               <div className="md:w-2/3">
                 <QuoteIcon className="h-12 w-12 text-neural-400/30 mb-4" />
                 <p className="text-xl italic mb-6">
-                  "This program was the inflection point in my career. I came in as a successful CEO by most external metrics, but internally I was fragmented and burning out. The transformation has been profound—not just in how I lead, but in how I live. My team sees it, my family feels it, and our business results reflect it."
+                  "I feel like I've returned to myself—but this time, upgraded. Despite my high potential, I felt perpetually drained and overwhelmed. The transformation was complete—100% increase in energy, panic attacks resolved, and professional productivity at peak levels."
                 </p>
                 <div>
-                  <h3 className="text-xl font-semibold">Michael Chen</h3>
-                  <p className="text-neural-400">CEO, Quantum Innovations</p>
+                  <h3 className="text-xl font-semibold">Anil Bhikadiya</h3>
+                  <p className="text-neural-400">Diamond Manufacturer</p>
                 </div>
               </div>
             </div>
@@ -67,27 +67,33 @@ const Testimonials = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <TestimonialCard
-              quote="As a founder, I was burning out despite our success. This program helped me reconnect with my purpose and redesign my life around what truly matters. The results are profound."
-              author="Sarah Johnson"
-              role="Founder, Elevate Capital"
+              quote="We always had the vision. What we lacked was integration. Eternazen gave us the mirror, the map, and the method. Our productivity surged and profit margins grew steadily."
+              author="Managing Director"
+              role="Oriana Textiles"
             />
             
             <TestimonialCard
-              quote="The blend of cutting-edge science with deep wisdom practices gave me tools I never knew existed. My executive team has commented on the positive shift in my leadership presence."
-              author="David Rodriguez"
-              role="CTO, Future Systems"
+              quote="I didn't lose myself. I just had to find the strength to meet the version of me that was waiting to be seen. My productivity increased 10x with renewed purpose."
+              author="Neha Nandwani"
+              role="Nutritionist"
             />
             
             <TestimonialCard
-              quote="I've done many leadership programs over my 20-year career. This one stands apart. The personalized approach and focus on whole-person optimization created lasting change."
-              author="Jennifer Lee"
-              role="Managing Director, Global Finance"
+              quote="I didn't need more strategies—I needed emotional clarity. Once I found that, everything changed. Business revenue tripled with successful expansion."
+              author="Harshal Bhagat"
+              role="Steel Manufacturing Entrepreneur"
             />
             
             <TestimonialCard
-              quote="Three months in, I'm sleeping better, thinking more clearly, and leading with more compassion. My team engagement scores have increased 27% since I began implementing what I've learned."
-              author="Robert Williams"
-              role="COO, Innovate Health"
+              quote="We have to learn to redefine success—not just as money and power, but as well-being and wisdom. I reversed type 2 diabetes and transformed my leadership approach."
+              author="Nitu Kaur"
+              role="Senior Corporate Executive"
+            />
+            
+            <TestimonialCard
+              quote="I no longer chase expansion. I embody it. I redesigned my role in business with more vision and less grind, while improving family bonds."
+              author="Ketan Mehta"
+              role="Real Estate Tycoon"
             />
           </div>
           
@@ -95,54 +101,10 @@ const Testimonials = () => {
             <Button 
               size="lg" 
               className="bg-neural-600 hover:bg-neural-700 text-white" 
-              onClick={() => document.getElementById('consultation')?.scrollIntoView({behavior: 'smooth'})}
+              onClick={() => window.open('https://calendly.com/drdharmeshshah/peak-performance-consultation', '_blank')}
             >
               Begin Your Transformation
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Video Testimonials */}
-      <section className="section-compact px-4 bg-neural-900/30">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="mb-4"><GradientText>Video Stories</GradientText></h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-              Hear directly from our program graduates
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="neural-card overflow-hidden">
-              <div className="aspect-video bg-neural-900/70 mb-4 rounded flex items-center justify-center">
-                <Brain className="h-12 w-12 text-neural-400/50" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Elizabeth's Journey</h3>
-              <p className="text-muted-foreground text-sm">
-                "How the program helped me navigate a major acquisition while maintaining my wellbeing."
-              </p>
-            </div>
-            
-            <div className="neural-card overflow-hidden">
-              <div className="aspect-video bg-neural-900/70 mb-4 rounded flex items-center justify-center">
-                <Brain className="h-12 w-12 text-neural-400/50" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Mark's Transformation</h3>
-              <p className="text-muted-foreground text-sm">
-                "From burnout to breakthrough: rebuilding my leadership approach from the inside out."
-              </p>
-            </div>
-            
-            <div className="neural-card overflow-hidden">
-              <div className="aspect-video bg-neural-900/70 mb-4 rounded flex items-center justify-center">
-                <Brain className="h-12 w-12 text-neural-400/50" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Team Evolution</h3>
-              <p className="text-muted-foreground text-sm">
-                "How our executive team transformed after three key leaders completed the program."
-              </p>
-            </div>
           </div>
         </div>
       </section>

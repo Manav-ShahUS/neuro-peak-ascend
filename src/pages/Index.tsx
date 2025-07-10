@@ -388,14 +388,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <TestimonialCard
-              quote="This program completely transformed my approach to leadership. The blend of science and spiritual practices has given me tools I never knew existed. My team has noticed the difference."
-              author="Michael Chen"
-              role="CEO, Quantum Innovations"
+              quote="I feel like I've returned to myself—but this time, upgraded. The transformation was complete—100% increase in energy, panic attacks resolved completely, and professional productivity reached peak levels."
+              author="Anil Bhikadiya"
+              role="Diamond Manufacturer"
             />
             <TestimonialCard
-              quote="As a founder, I was burning out despite our success. This program helped me reconnect with my purpose and redesign my life around what truly matters. The results are profound."
-              author="Sarah Johnson"
-              role="Founder, Elevate Capital"
+              quote="We always had the vision. What we lacked was integration. Eternazen gave us the mirror, the map, and the method. Our productivity surged and profit margins grew steadily."
+              author="Managing Director"
+              role="Oriana Textiles"
             />
           </div>
           

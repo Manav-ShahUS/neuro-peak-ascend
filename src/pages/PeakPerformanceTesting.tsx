@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import MainNavigation from "@/components/MainNavigation";
 import Footer from "@/components/Footer";
@@ -7,7 +8,7 @@ import { GradientText } from "@/components/GradientText";
 import { Check, FileText, Gauge, ShieldCheck, Brain, TestTube, Heart, CircleCheck } from "lucide-react";
 
 const PeakPerformanceTesting = () => {
-  const [selectedPlan, setSelectedPlan] = useState<"basic" | "elite" | null>(null);
+  const [selectedPlan, setSelectedPlan] = useState<"neurocode" | "longevitycode" | "eternacode" | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -281,7 +282,7 @@ const PeakPerformanceTesting = () => {
 
         {/* Diagnostic Plans Section */}
         <section id="diagnostic-plans" className="py-20 px-4 bg-gradient-to-t from-neural-900 to-neural-950">
-          <div className="container mx-auto max-w-5xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <div className="mb-6 inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-neural-800/40 backdrop-blur-sm border border-neural-700/30">
                 <FileText className="mr-2 h-4 w-4 text-neural-400" />
@@ -295,14 +296,67 @@ const PeakPerformanceTesting = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Basic Plan */}
-              <Card className={`bg-neural-800/20 border ${selectedPlan === 'basic' ? 'border-neural-500' : 'border-neural-700/30'} h-full transition-all`}>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* NeuroCode Plan */}
+              <Card className={`bg-neural-800/20 border ${selectedPlan === 'neurocode' ? 'border-neural-500' : 'border-neural-700/30'} h-full transition-all`}>
                 <CardHeader className="text-center pb-6">
                   <div className="mb-2 px-3 py-1 bg-neural-700/30 text-neural-300 inline-block rounded-full mx-auto text-sm">
-                    Basic Plan
+                    Essential
                   </div>
-                  <CardTitle className="text-2xl">Basic Diagnostic Protocol</CardTitle>
+                  <CardTitle className="text-2xl">NeuroCode</CardTitle>
+                  <div className="mt-4">
+                    <span className="text-3xl font-bold">₹30,900</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="pb-6">
+                  <div className="space-y-4">
+                    <div className="bg-neural-800/30 p-5 rounded-lg">
+                      <h4 className="font-medium mb-3">15 Essential Tests Including:</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Lifestyle Assessment</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Advanced Blood Profile</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">qEEG Brain Mapping</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">HRV Analysis</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Life Coach Consultation</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <p className="text-neural-400 text-sm italic">
+                      Perfect for cognitive and neurological optimization.
+                    </p>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button 
+                    className={`w-full ${selectedPlan === 'neurocode' ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 hover:bg-neural-600'}`}
+                    onClick={() => setSelectedPlan('neurocode')}
+                  >
+                    Select NeuroCode
+                  </Button>
+                </CardFooter>
+              </Card>
+
+              {/* LongevityCode Plan */}
+              <Card className={`bg-neural-800/20 border ${selectedPlan === 'longevitycode' ? 'border-neural-500' : 'border-neural-700/30'} h-full transition-all`}>
+                <CardHeader className="text-center pb-6">
+                  <div className="mb-2 px-3 py-1 bg-neural-600/30 text-neural-300 inline-block rounded-full mx-auto text-sm">
+                    Comprehensive
+                  </div>
+                  <CardTitle className="text-2xl">LongevityCode</CardTitle>
                   <div className="mt-4">
                     <span className="text-3xl font-bold">₹49,000</span>
                   </div>
@@ -310,44 +364,48 @@ const PeakPerformanceTesting = () => {
                 <CardContent className="pb-6">
                   <div className="space-y-4">
                     <div className="bg-neural-800/30 p-5 rounded-lg">
-                      <h4 className="font-medium mb-3">What's Included:</h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-medium mb-3">18 Advanced Tests Including:</h4>
+                      <ul className="space-y-2 text-sm">
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">18 Foundational Tests</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">All NeuroCode Tests</span>
                         </li>
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">Performance Consultation</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Tumor Markers</span>
                         </li>
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">Results Interpretation Session</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Gut Microbiome Test</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Legacy Quotient</span>
                         </li>
                       </ul>
                     </div>
                     <p className="text-neural-400 text-sm italic">
-                      Ideal if you're beginning your optimization journey.
+                      Focused on long-term health and vitality optimization.
                     </p>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button 
-                    className={`w-full ${selectedPlan === 'basic' ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 hover:bg-neural-600'}`}
-                    onClick={() => setSelectedPlan('basic')}
+                    className={`w-full ${selectedPlan === 'longevitycode' ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 hover:bg-neural-600'}`}
+                    onClick={() => setSelectedPlan('longevitycode')}
                   >
-                    Select Basic Plan
+                    Select LongevityCode
                   </Button>
                 </CardFooter>
               </Card>
 
-              {/* Elite Plan */}
-              <Card className={`bg-neural-800/20 border ${selectedPlan === 'elite' ? 'border-neural-500' : 'border-neural-700/30'} h-full transition-all`}>
+              {/* EternaCode Plan */}
+              <Card className={`bg-neural-800/20 border ${selectedPlan === 'eternacode' ? 'border-neural-500' : 'border-neural-700/30'} h-full transition-all`}>
                 <CardHeader className="text-center pb-6">
                   <div className="mb-2 px-3 py-1 bg-neural-500/30 text-neural-300 inline-block rounded-full mx-auto text-sm">
-                    Premium Option
+                    Ultimate
                   </div>
-                  <CardTitle className="text-2xl">Elite Diagnostic Protocol</CardTitle>
+                  <CardTitle className="text-2xl">EternaCode</CardTitle>
                   <div className="mt-4">
                     <span className="text-3xl font-bold">₹69,000</span>
                   </div>
@@ -355,37 +413,37 @@ const PeakPerformanceTesting = () => {
                 <CardContent className="pb-6">
                   <div className="space-y-4">
                     <div className="bg-neural-800/30 p-5 rounded-lg">
-                      <h4 className="font-medium mb-3">What's Included:</h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-medium mb-3">20 Elite Tests Including:</h4>
+                      <ul className="space-y-2 text-sm">
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">20 Advanced Tests & Markers</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">All LongevityCode Tests</span>
                         </li>
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">DNA Telomere Length Analysis</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Inflammatory Markers</span>
                         </li>
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">Extended Personalized Interpretation</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">DNA Telomere Assay</span>
                         </li>
                         <li className="flex items-start">
-                          <Check className="mr-2 h-5 w-5 text-neural-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-neural-300">Inflammatory Marker Analysis</span>
+                          <Check className="mr-2 h-4 w-4 text-neural-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-neural-300">Complete Cellular Analysis</span>
                         </li>
                       </ul>
                     </div>
                     <p className="text-neural-400 text-sm italic">
-                      Designed for those committed to long-term vitality and legacy-level leadership.
+                      The ultimate in personalized health and performance optimization.
                     </p>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button 
-                    className={`w-full ${selectedPlan === 'elite' ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 hover:bg-neural-600'}`}
-                    onClick={() => setSelectedPlan('elite')}
+                    className={`w-full ${selectedPlan === 'eternacode' ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 hover:bg-neural-600'}`}
+                    onClick={() => setSelectedPlan('eternacode')}
                   >
-                    Select Elite Plan
+                    Select EternaCode
                   </Button>
                 </CardFooter>
               </Card>
@@ -396,6 +454,7 @@ const PeakPerformanceTesting = () => {
                 size="lg" 
                 disabled={!selectedPlan}
                 className={`${selectedPlan ? 'bg-neural-500 hover:bg-neural-600' : 'bg-neural-700 opacity-70 cursor-not-allowed'} text-white`}
+                onClick={() => window.open('https://calendly.com/drdharmeshshah/peak-performance-consultation', '_blank')}
               >
                 Book Your Diagnostic Now
               </Button>
