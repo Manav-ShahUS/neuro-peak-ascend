@@ -19,10 +19,10 @@ const MainNavigation = () => {
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/7068fcd5-d8da-43af-86fc-00ce6eca00fb.png" 
-              alt="Peak Performance Program" 
+              alt="Peak Performers Program" 
               className="h-8 w-8"
             />
-            <span className="font-bold text-lg">Peak Performance</span>
+            <span className="font-bold text-lg">Peak Performers</span>
           </Link>
 
           {/* Desktop Navigation */}
